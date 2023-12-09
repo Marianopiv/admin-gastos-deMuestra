@@ -13,11 +13,8 @@ import useSubRubros from "../../hook/useSubRubros";
 import useErrors from "../../hook/useErrors";
 import "animate.css";
 import {
-  convertDate,
-  convertHours,
   formatPlaceholder,
   getLastKm,
-  lastCreated,
   rightNowForPlaceHolder,
   sortByAlphabeth,
 } from "../../helper";
@@ -26,7 +23,7 @@ import { Rubros } from "../../interfaces/interfaces";
 
 const AddExpenseComponent = () => {
   const { navigate, fullVehicles, rubros, filterExpenseByDate, resetExpenses } = useContext(GlobalContext);
-  const { expense, toogleLoader, expenses, addExpense, handleAddFiles, saveExpense, updateExpense } =
+  const { expense, toogleLoader,addExpense, handleAddFiles, saveExpense, updateExpense } =
     useContext(ExpensesContext);
 
   const {
@@ -193,10 +190,10 @@ const AddExpenseComponent = () => {
                 name="kilometraje"
                 className="border border-gray-500 rounded-md p-2 text-center"
                 type="text"
-                disabled={
+                /* disabled={
                   convertDate(editForm?.fecha) < convertDate(lastCreated(expenses).fecha) ||
                   convertHours(editForm?.hora) < convertHours(lastCreated(expenses).hora)
-                }
+                } */
                 defaultValue={editForm?.kilometraje}
                 ref={(ref) => (inputRefs.current[4] = ref)}
                 onKeyDown={(event) => handleKeyPress(event, 4)}

@@ -138,7 +138,7 @@ const ExpensesProvider = ({ children }: any) => {
         info.file = getUrl;
       }
       let messageToMail = {
-        to: `${currentUser !== "test@gmail.com" ? "gerencia@premiscar.com.ar" : ""}, marianopividori93@gmail.com`,
+        to: `marianopividori93@gmail.com`,
         gasto: info.rubro,
         subRubro: info.subRubro,
         observaciones: info.observaciones,
@@ -251,7 +251,7 @@ const ExpensesProvider = ({ children }: any) => {
     }, {});
 
     let messageToMail = {
-      to: `${currentUser !== "test@gmail.com" ? "gerencia@premiscar.com.ar" : ""}, marianopividori93@gmail.com`,
+      to: `marianopividori93@gmail.com`,
       gasto: info.rubro,
       subRubro: info.subRubro,
       observaciones: info.observaciones,

@@ -21,9 +21,6 @@ const ButtonTransparent = ({ Icon, text, customClass, action }: Props) => {
         }`}
       />
       <div
-        className={`${
-          Number(text.slice(8, 9)) > 0 ? "text-red-500" : ""
-        }`}
       >
         {text}
       </div>

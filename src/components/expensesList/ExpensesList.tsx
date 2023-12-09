@@ -19,6 +19,7 @@ type Props = {
     element: string,
     expense: Expenses,
   ) => void;
+  handleToogleLoader:()=>void;
   handleWillDelete: (id: string) => void;
   willDelete: null | string;
 };
@@ -46,7 +47,7 @@ const ExpensesList = memo(
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [memoizedExpenses, ITEMS_PER_PAGE]);
 
-    if (toogleLoader) {
+    if (!toogleLoader&&memoizedExpenses.length<1) {
       return <Spinner />;
     }
     return (

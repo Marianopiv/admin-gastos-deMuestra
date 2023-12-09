@@ -39,6 +39,7 @@ const DinamicInfo = memo(() => {
     filterExpenseByCar,
     filterExpenseByDate,
     resetExpenses,
+    setToogleLoader
   } = useFilter();
   const { deleted, toogleDeleted, handleToogleDeleted } = useSaveDelete();
   const { search, handleToogleSearch, handleResetSearch, toogleSearch } =
@@ -55,6 +56,10 @@ const DinamicInfo = memo(() => {
   const handleAlerts = () => {
     handleNotificationsClick()
     marcAsViewed("notifications")
+  }
+
+  const handleToogleLoader = () => {
+    setToogleLoader(true)
   }
 
   useEffect(() => {
@@ -225,6 +230,7 @@ const DinamicInfo = memo(() => {
         </div>
         {!toogleDeleted ? (
           <ExpensesList
+          handleToogleLoader={handleToogleLoader}
             toogleLoader={toogleLoader}
             willDelete={willDelete}
             expenses={filteredExpenses}
