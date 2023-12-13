@@ -11,7 +11,6 @@ const ManageAlerts = () => {
 
   useEffect(() => {
     if (updateCars) {
-      console.log("sucedio eso")
       updateMultipleVehicles(selectedVehicles);
       handleSelectedVehicles()
     }

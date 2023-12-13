@@ -45,7 +45,6 @@ const CurrentAlert = ({ vehiculo, alertas, alertasSeteadas, toogleSearch }: Prop
 
   useEffect(() => {
     if (wantToRemoveAlert) {
-      console.log("entro en el if")
       handleUpdateVehicle(temporalVehicle.id, "vehiculos", temporalVehicle, true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

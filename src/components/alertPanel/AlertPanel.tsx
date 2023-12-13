@@ -109,7 +109,6 @@ const AlertPanel = ({ handleSetSelected, handleChange }: Props) => {
           <div key={index} className="flex gap-2">
             <input
               onChange={() => {
-                console.log("esto es el onchange");
                 if (handleSearch(vehicle)) {
                   handleRemove(vehicle);
                 } else {

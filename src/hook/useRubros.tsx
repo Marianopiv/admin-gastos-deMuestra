@@ -25,7 +25,6 @@ const useRubros = () => {
   const handleSubRubro = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setChosenRubro({ ...chosenRubro, [name]: value });
-    console.log(chosenRubro, "chosenRubro");
   };
 
   const handleToogleSubRubro = (obj: Rubros) => {

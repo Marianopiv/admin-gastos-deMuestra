@@ -8,7 +8,6 @@ export default function App() {
   const [data, setData] = useState(arrayData);
 
   const { filterByRubro, filteredExpenses } = useFilter(data);
-  console.log(filteredExpenses);
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>

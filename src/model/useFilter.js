@@ -4,7 +4,6 @@ const useFilter = (data) => {
   const [filteredExpenses, setFilteredExpenses] = useState(data);
   const filterByRubro = (value, subFiltro) => {
     if (!value) {
-      console.log("se ejecuto?");
       setFilteredExpenses(data);
       return;
     }

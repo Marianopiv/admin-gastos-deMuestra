@@ -61,7 +61,6 @@ const GlobalProvider = ({ children }: any) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, vehicle: FullVehicles) => {
     const { checked } = e.target;
     if (selectedVehicles.length > 0 && !checked) {
-      console.log(vehicle);
       setSelectedVehicles(
         selectedVehicles.filter((includedVehicles: FullVehicles) => includedVehicles.patente !== vehicle.patente),
       );
@@ -173,7 +172,6 @@ const GlobalProvider = ({ children }: any) => {
       }));
       setRubros(sortByAlphabethRubro(updatedData));
 
-      console.log(rubros);
     });
 
     // Cleanup function to unsubscribe when the component unmounts
